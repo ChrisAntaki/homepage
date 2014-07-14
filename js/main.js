@@ -45,7 +45,7 @@ function init() {
 
     scene = new THREE.Scene();
 
-    scene.fog = new THREE.FogExp2(0x000000, 0.0026);
+    scene.fog = new THREE.FogExp2(0x000000, 0.001);
 
     // renderer = new THREE.CanvasRenderer();
     renderer = new THREE.WebGLRenderer({

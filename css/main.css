@@ -71,7 +71,7 @@ body {
 
 .card p {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 42px;
     margin: 0 0 10px;
     /*text-indent: 20px;*/
 }
@@ -102,6 +102,7 @@ body {
 
 .card a {
     color: #ccc;
+    font-weight: bold;
     text-decoration: none;
     -webkit-transition: all 0.3s;
        -moz-transition: all 0.3s;
@@ -110,7 +111,7 @@ body {
             transition: all 0.3s;
 }
 .card a:hover {
-    color: #f55018;
+    color: #c02e1a;
 }
 
 .card a.background-less:hover {
