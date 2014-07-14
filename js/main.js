@@ -47,7 +47,6 @@ function init() {
 
     scene.fog = new THREE.FogExp2(0x000000, 0.001);
 
-    // renderer = new THREE.CanvasRenderer();
     renderer = new THREE.WebGLRenderer({
         alpha: true,
         antialiasing: true
@@ -125,7 +124,7 @@ function animate() {
         spinModifier = 0.03;
     }
     
-    particleSystem.rotation.x -= 0.01 + spinModifier;
+    particleSystem.rotation.x -= 0.003 + spinModifier;
 
     if (pMaterial.opacity < 1) {
         pMaterial.opacity += 0.01;
