@@ -34,12 +34,13 @@ body {
 }
 
 .card {
+    border-radius: 5px;
     color: white;
     font-family: verdana, sans-serif;
     margin: 12px auto;
+    padding: 5%;
     text-align: center;
-    width: 300px;
-    border-radius: 5px;
+    width: 100%;
 }
 
 .card h1,
