@@ -82,6 +82,7 @@ body {
 
 .card a {
     color: #fff;
+    display: block;
     text-decoration: none;
     -webkit-transition: all 0.3s;
        -moz-transition: all 0.3s;
