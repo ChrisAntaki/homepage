@@ -2,6 +2,9 @@ require({
     baseUrl: 'js',
     // three.js should have UMD support soon, but it currently does not
     shim: {
+        'vendor/underscore': {
+            exports: '_'
+        },
         'vendor/three': {
             exports: 'THREE'
         },
@@ -16,11 +19,12 @@ require({
         }
     }
 }, [
+    'vendor/underscore',
     'vendor/three',
     'vendor/threex.domevents',
     'vendor/threex.keyboardstate',
     'vendor/threex.windowresize'
-], function(THREE, THREEx) {
+], function(_, THREE, THREEx) {
 
 var camera,
     domEvents,
@@ -31,8 +35,15 @@ var camera,
 
 var boxes = [];
 
+var accelerations = {
+    x: 0,
+    y: 3,
+    z: 0
+};
+
 
 init();
+listenToAcceleration();
 addParticles();
 animate();
 
@@ -83,10 +94,10 @@ function addParticles() {
     });
 
     pMaterial.opacity = 0;
-    
+
     // now create the individual particles
     for(var p = 0; p < particleCount; p++) {
-    
+
         // create a particle with random
         // position values, -250 -> 250
         var amount = window.innerHeight;
@@ -107,9 +118,9 @@ function addParticles() {
 
     // create the particle system
     window.particleSystem = new THREE.ParticleSystem(particles, pMaterial);
-    
+
     particleSystem.sortParticles = true;
-    
+
     // add it to the scene
     scene.add(particleSystem);
 }
@@ -119,12 +130,12 @@ function removeClickedItem(e) {
 }
 
 function animate() {
-    var spinModifier = 0;
+    var spinModifier = 0.001;
     if (keyboard.pressed("c")) {
-        spinModifier = 0.03;
+        spinModifier = 0.005;
     }
-    
-    particleSystem.rotation.x -= 0.003 + spinModifier;
+
+    particleSystem.rotation.x -= accelerations.y * spinModifier;
 
     if (pMaterial.opacity < 1) {
         pMaterial.opacity += 0.01;
@@ -134,6 +145,16 @@ function animate() {
 
     // Repeat.
     requestAnimationFrame(animate);
+}
+
+function deviceMotionHandler(e) {
+    accelerations = e.accelerationIncludingGravity;
+}
+
+function listenToAcceleration() {
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', _.throttle(deviceMotionHandler, 200), false);
+    }
 }
 
 });
