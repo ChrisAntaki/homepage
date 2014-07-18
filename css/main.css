@@ -76,6 +76,10 @@ body {
     text-align: right;
 }
 
+.card p strong {
+    font-size: 28px;
+}
+
 .card p:last-child {
     margin: 0;
 }
