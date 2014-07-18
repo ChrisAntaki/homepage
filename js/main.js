@@ -37,7 +37,7 @@ var boxes = [];
 
 var accelerations = {
     x: 0,
-    y: 0,
+    y: 3,
     z: 0
 };
 
