@@ -37,10 +37,15 @@ var boxes = [];
 
 var accelerations = {
     x: 0,
-    y: 3,
+    y: 0,
     z: 0
 };
 
+var velocities = {
+    x: 0,
+    y: 3,
+    z: 0
+};
 
 init();
 listenToAcceleration();
@@ -135,7 +140,13 @@ function animate() {
         spinModifier = 0.005;
     }
 
-    particleSystem.rotation.x -= accelerations.y * spinModifier;
+    velocities.y += accelerations.y * 0.1;
+    velocities.y *= 0.97;
+
+    velocities.y = Math.min(velocities.y, 9);
+    velocities.y = Math.max(velocities.y, -9);
+
+    particleSystem.rotation.x -= velocities.y * spinModifier;
 
     if (pMaterial.opacity < 1) {
         pMaterial.opacity += 0.01;
