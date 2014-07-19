@@ -130,10 +130,6 @@ function addParticles() {
     scene.add(particleSystem);
 }
 
-function removeClickedItem(e) {
-    scene.remove(e.target);
-}
-
 function animate() {
     var spinModifier = 0.001;
     if (keyboard.pressed("c")) {
