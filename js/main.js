@@ -136,7 +136,14 @@ function animate() {
         spinModifier = 0.005;
     }
 
-    velocities.y += accelerations.y * 0.1;
+    if (window.orientation === 90) {
+        velocities.y += accelerations.x * 0.1;
+    } else if (window.orientation === -90) {
+        velocities.y -= accelerations.x * 0.1;
+    } else {
+        velocities.y += accelerations.y * 0.1;
+    }
+
     velocities.y *= 0.97;
 
     velocities.y = Math.min(velocities.y, 9);
