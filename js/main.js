@@ -140,6 +140,8 @@ function animate() {
         velocities.y += accelerations.x * 0.1;
     } else if (window.orientation === -90) {
         velocities.y -= accelerations.x * 0.1;
+    } else if (window.orientation === 180) {
+        velocities.y -= accelerations.y * 0.1;
     } else {
         velocities.y += accelerations.y * 0.1;
     }
