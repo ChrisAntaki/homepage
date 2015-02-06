@@ -1,59 +1,82 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Chris Antaki</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, user-scalable=no">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <div class="table">
-            <div class="table-cell">
-                <div class="card box-sizing">
-                    <p>
-                        <strong>Chris Antaki</strong>
-                        <a href="https://soundcloud.com/chrisantaki">SoundCloud</a>
-                        <a href="https://www.linkedin.com/in/chrisantaki">LinkedIn</a>
-                        <a href="https://twitter.com/cantaki">Twitter</a>
-                        <a href="https://github.com/chrisantaki">GitHub</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+<head>
+    <style>
+    html, body {
+        background-color: black;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        width: 100%;
+    }
 
-        <canvas id="world"></canvas>
+    div.chemicals {
+        height: 100%;
+        width: 100%;
+    }
 
-        <script src="js/confetti.js"></script>
+    div.chemicals div {
+        border-radius: 999px;
+        position: fixed;
 
-<script type="text/javascript">
-window._idl = {};
-_idl.variant = "banner";
-(function() {
-var idl = document.createElement('script');
-idl.type = 'text/javascript';
-idl.async = true;
-idl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'banner');
-document.getElementsByTagName('body')[0].appendChild(idl);
-})();
-</script>
+        -webkit-transition: all 3s;
+                transition: all 3s;
+    }
 
-<!-- Piwik -->
-<script type="text/javascript">
-var _paq = _paq || [];
-_paq.push(['trackPageView']);
-_paq.push(['enableLinkTracking']);
-(function() {
-var u="//statistics.chrisantaki.com/";
-_paq.push(['setTrackerUrl', u+'piwik.php']);
-_paq.push(['setSiteId', 1]);
-var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-})();
-</script>
-<noscript><p><img src="//statistics.chrisantaki.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
+    div.chemicals div.animate-out {
+        -webkit-transition: all 0.5s;
+                transition: all 0.5s;
+    }
 
-    </body>
+    div.card {
+        color: #fff;
+        font-family: Verdana, sans-serif;
+        font-size: 20px;
+        margin: 0 auto 32px;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    div.card h2 {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin: 32px 0 24px;
+    }
+
+    div.card a {
+        color: #09c;
+        display: inline-block;
+        line-height: 2;
+        padding: 0 4px;
+
+        -webkit-transition: color 0.3s;
+                transition: color 0.3s;
+    }
+
+    div.card a:hover {
+        color: #2be;
+    }
+    </style>
+
+    <title>Chris Antaki</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+
+<div class="card">
+    <h2>Chris Antaki</h2>
+    <a href="https://github.com/chrisantaki">GitHub</a>
+    <a href="https://www.linkedin.com/in/chrisantaki">LinkedIn</a>
+    <a href="https://soundcloud.com/chrisantaki">SoundCloud</a>
+</div>
+
+<div class="chemicals"></div>
+
+<!-- JavaScript -->
+<script src="js/index.js"></script>
+
+</body>
 </html>
