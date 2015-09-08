@@ -220,16 +220,11 @@ Chemicals.prototype.displayFPS = function() {
     var length = this.lastFrames.length;
     var difference = (this.lastFrames[length - 1] - this.lastFrames[0]) / (length - 1);
     var fps = 1000 / difference;
-    console.log(fps);
 
     if (fps < 55 && this.createChemicalDelay < 1000) {
         this.createChemicalDelay += 10;
-        // console.log('Added 10ms to this.createChemicalDelay');
-        // console.log('this.createChemicalDelay:', this.createChemicalDelay);
     } else if (fps > 59 && this.createChemicalDelay > 32) {
         this.createChemicalDelay -= 1;
-        // console.log('Removed 1ms from this.createChemicalDelay');
-        // console.log('this.createChemicalDelay:', this.createChemicalDelay);
     }
 
     this.queueDisplayFPS();
