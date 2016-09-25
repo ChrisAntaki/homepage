@@ -71,7 +71,7 @@ ParticleBackground.prototype.onMouseDown = function(e) {
 
     this.isAnimating = true;
     this.createWave(node.meta.column, node.meta.row);
-    setTimeout(this.cleanParticles.bind(this), 1500);
+    setTimeout(this.cleanParticles.bind(this), 3000);
 };
 
 ParticleBackground.prototype.cleanParticles = function() {

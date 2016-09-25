@@ -17,10 +17,9 @@ section.particles .particle {
 }
 
 section.particles .particle div {
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
-    background-color: #008aff;
-    box-shadow: 0 2px 8px rgba(0, 85, 255, 0.6);
+    background-color: #0095ff;
     content: '';
     display: block;
     height: 95%;
