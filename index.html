@@ -1,96 +1,78 @@
 <!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Chris Antaki (New)</title>
+<link rel="shortcut icon" href="./favicon.ico">
+<style>
+* {
+    box-sizing: border-box;
+}
+html {
+    min-height: 100%;
+}
+body {
+    background-color: #08f;
+    margin: 0;
+    min-height: 100%;
+}
+header {
+    color: #fff;
+    font-family: sans-serif;
+    letter-spacing: .5px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+header h1 {
+    display: block;
+    margin: 0 auto 4px;
+    max-width: 240px;
+    padding: 24px 20px 0;
+}
+header .links {
+    text-shadow: none;
+    padding: 0 0 8px;
+}
+header .links a {
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 8px;
+    text-decoration: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    transition: text-shadow 0.3s;
+}
+header .links a:hover {
+    text-shadow: 0 2px 9px rgba(0, 0, 0, 0.6);
+}
+header .links .dot {
+    font-size: 16px;
+    font-weight: bold;
+}
+section {
+    display: none;
+}
+</style>
 
-    <style>
-    @font-face {
-        font-family: 'SF Distant Galaxy';
-        src: url('./fonts/sf_distant_galaxy-webfont.eot');
-        src: url('./fonts/sf_distant_galaxy-webfont.eot?#iefix') format('embedded-opentype'),
-             url('./fonts/sf_distant_galaxy-webfont.woff2') format('woff2'),
-             url('./fonts/sf_distant_galaxy-webfont.woff') format('woff'),
-             url('./fonts/sf_distant_galaxy-webfont.ttf') format('truetype'),
-             url('./fonts/sf_distant_galaxy-webfont.svg#sf_distant_galaxyregular') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    html, body {
-        background-color: black;
-        height: 100%;
-        font-family: 'SF Distant Galaxy', sans-serif;
-        margin: 0;
-        overflow: hidden;
-        width: 100%;
-    }
-
-    div.chemicals {
-        height: 100%;
-        width: 100%;
-    }
-
-    div.chemicals div {
-        border-radius: 999px;
-        position: fixed;
-
-        -webkit-transition: all 3s;
-                transition: all 3s;
-    }
-
-    div.chemicals div.animate-out {
-        -webkit-transition: all 0.5s;
-                transition: all 0.5s;
-    }
-
-    div.card {
-        color: #fff;
-        font-size: 20px;
-        margin: 0 auto 32px;
-        padding: 0 16px;
-        text-align: center;
-    }
-
-    div.card h2 {
-        font-size: 32px;
-        letter-spacing: 2px;
-        margin: 32px 0 8px;
-    }
-
-    div.card a {
-        color: #09c;
-        display: inline-block;
-        line-height: 2;
-        padding: 0 4px;
-        text-decoration: none;
-
-        -webkit-transition: color 0.3s;
-                transition: color 0.3s;
-    }
-
-    div.card a:hover {
-        color: #2be;
-    }
-    </style>
-
-    <title>Chris Antaki</title>
-
-    <meta name="viewport" content="width=device-width, user-scalable=yes">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-</head>
-<body>
-
-<div class="card">
-    <h2>Chris Antaki</h2>
-    <a href="https://github.com/chrisantaki">Code</a>
-    <a href="https://soundcloud.com/chrisantaki">Music</a>
+<header>
+<h1>Chris Antaki</h1>
+<div class="links">
+<a href="https://github.com/chrisantaki">GitHub</a>
+<span class="dot">&middot;</span>
+<a href="https://www.linkedin.com/in/chrisantaki">LinkedIn</a>
+<span class="dot">&middot;</span>
+<a href="https://soundcloud.com/chrisantaki">SoundCloud</a>
 </div>
+</header>
 
-<div class="chemicals"></div>
+<!-- f😉ld -->
+<link rel="stylesheet" href="./css/homepage.css">
+<section class="particles"></section>
+<script src="./js/homepage.js"></script>
 
-<!-- JavaScript -->
-<script src="js/index.js"></script>
+<!-- prefetching -->
+<link rel="dns-prefetch" href="https://github.com/">
+<link rel="dns-prefetch" href="https://www.linkedin.com/">
+<link rel="dns-prefetch" href="https://soundcloud.com/">
 
-</body>
-</html>
