@@ -14,23 +14,23 @@ ParticleBackground.prototype.addEventListeners = function() {
 };
 
 ParticleBackground.prototype.createParticles = function(i) {
-    for (var i = 0; i < 100; i++) {
+    for (let i = 0; i < 100; i++) {
         this.createParticle(i);
     }
 };
 
 ParticleBackground.prototype.createParticle = function(i) {
-    var el = document.createElement('div');
+    const el = document.createElement('div');
     el.classList.add('particle');
     this.particleContainer.appendChild(el);
     
-    var circle = document.createElement('div');
+    const circle = document.createElement('div');
     circle.classList.add('circle');
     circle.classList.add('animated');
     el.appendChild(circle);
 
-    var column = i % 10 | 0;
-    var row = i / 10 | 0;
+    const column = i % 10 | 0;
+    const row = i / 10 | 0;
     el.meta = {
         column: column,
         row: row,
