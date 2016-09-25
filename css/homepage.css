@@ -1,15 +1,11 @@
 section.particles {
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-name: intro;
     display: block;
     height: 100%;
-    opacity: 0;
-    width: 100%;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     user-select: none;
+    width: 100%;
 }
 
 section.particles .particle {
@@ -33,15 +29,6 @@ section.particles .particle div {
     top: 2.5%;
     transition: 1.2s;
     width: 95%;
-}
-
-@keyframes intro {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /*!
