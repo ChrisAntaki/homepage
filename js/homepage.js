@@ -1,3 +1,5 @@
+'use strict';
+
 // Particle background
 function ParticleBackground() {
     this.iosClickTimeout = 0;
@@ -14,30 +16,30 @@ ParticleBackground.prototype.addEventListeners = function() {
 };
 
 ParticleBackground.prototype.createParticles = function(i) {
-    for (let i = 0; i < 100; i++) {
+    for (var i = 0; i < 100; i++) {
         this.createParticle(i);
     }
 };
 
 ParticleBackground.prototype.createParticle = function(i) {
-    const el = document.createElement('div');
+    var el = document.createElement('div');
     el.classList.add('particle');
     this.particleContainer.appendChild(el);
     
-    const circle = document.createElement('div');
+    var circle = document.createElement('div');
     circle.classList.add('circle');
     circle.classList.add('animated');
     el.appendChild(circle);
 
-    const column = i % 10 | 0;
-    const row = i / 10 | 0;
+    var column = i % 10 | 0;
+    var row = i / 10 | 0;
     el.meta = {
         column: column,
         row: row,
     };
     el.style.transform = 'translate3d(' + (216 - column * 44) + 'px, ' + (212 - row * 44) + 'px, 0)';
     el.style.transitionDelay = (i * 4) + 'ms';
-    el.offsetWidth = el.offsetWidth;
+    el.offsetWidth;
     el.style.opacity = 1;
     el.style.transform = 'translate3d(0, 0, 0)';
 };
@@ -62,10 +64,10 @@ ParticleBackground.prototype.onMouseDown = function(e) {
         return;
     }
 
-    const column = e.clientX / window.innerWidth * 10 | 0;
-    const row = e.clientY / window.innerHeight * 10 | 0;
-    const index = row * 10 + column;
-    const node = this.particleContainer.children[index];
+    var column = e.clientX / window.innerWidth * 10 | 0;
+    var row = e.clientY / window.innerHeight * 10 | 0;
+    var index = row * 10 + column;
+    var node = this.particleContainer.children[index];
 
     this.isAnimating = true;
     this.createWave(node.meta.column, node.meta.row);
@@ -73,8 +75,8 @@ ParticleBackground.prototype.onMouseDown = function(e) {
 };
 
 ParticleBackground.prototype.cleanParticles = function() {
-    for (let i = 0; i < this.particleContainer.children.length; i++) {
-        const node = this.particleContainer.children[i].firstElementChild;
+    for (var i = 0; i < this.particleContainer.children.length; i++) {
+        var node = this.particleContainer.children[i].firstElementChild;
         node.style.animationName = '';
     }
 
@@ -90,17 +92,17 @@ ParticleBackground.prototype.positionIsValid = function(column, row) {
 };
 
 ParticleBackground.prototype.animateParticle = function(column, row, delay) {
-    const index = row * 10 + column;
-    const node = this.particleContainer.children[index].firstElementChild;
+    var index = row * 10 + column;
+    var node = this.particleContainer.children[index].firstElementChild;
     node.style.animationName = 'rubberBand';
     node.style.animationDelay = delay * 100 + 'ms';
 };
 
 ParticleBackground.prototype.createWave = function(column, row) {
     this.animateParticle(column, row, 0);
-    for (let distance = 1; distance <= 9; distance++) {
+    for (var distance = 1; distance <= 9; distance++) {
         // Top left to right
-        for (let i = column - distance; i < column + distance; i++) {
+        for (var i = column - distance; i < column + distance; i++) {
             if (!this.positionIsValid(i, row - distance)) {
                 continue;
             }
@@ -108,7 +110,7 @@ ParticleBackground.prototype.createWave = function(column, row) {
         }
 
         // Top right to bottom
-        for (let i = row - distance; i < row + distance; i++) {
+        for (var i = row - distance; i < row + distance; i++) {
             if (!this.positionIsValid(column + distance, i)) {
                 continue;
             }
@@ -116,7 +118,7 @@ ParticleBackground.prototype.createWave = function(column, row) {
         }
 
         // Bottom right to left
-        for (let i = column + distance; i > column - distance; i--) {
+        for (var i = column + distance; i > column - distance; i--) {
             if (!this.positionIsValid(i, row + distance)) {
                 continue;
             }
@@ -124,7 +126,7 @@ ParticleBackground.prototype.createWave = function(column, row) {
         }
 
         // Bottom left to top
-        for (let i = row + distance; i > row - distance; i--) {
+        for (var i = row + distance; i > row - distance; i--) {
             if (!this.positionIsValid(column - distance, i)) {
                 continue;
             }
@@ -134,4 +136,4 @@ ParticleBackground.prototype.createWave = function(column, row) {
 };
 
 // Create background
-const background = new ParticleBackground();
+var background = new ParticleBackground();
