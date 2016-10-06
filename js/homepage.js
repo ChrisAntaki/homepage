@@ -8,6 +8,7 @@ function ParticleBackground() {
 
     this.addEventListeners();
     this.createParticles();
+    this.animateParticles();
 }
 
 ParticleBackground.prototype.addEventListeners = function() {
@@ -39,9 +40,16 @@ ParticleBackground.prototype.createParticle = function(i) {
     };
     el.style.transform = 'translate3d(' + (216 - column * 44) + 'px, ' + (212 - row * 44) + 'px, 0)';
     el.style.transitionDelay = (i * 4) + 'ms';
-    el.offsetWidth;
-    el.style.opacity = 1;
-    el.style.transform = 'translate3d(0, 0, 0)';
+    return el;
+};
+
+ParticleBackground.prototype.animateParticles = function(e) {
+    var particles = Array.prototype.slice.call(this.particleContainer.children);
+    this.particleContainer.offsetWidth; // Reflow
+    particles.forEach(function(particle) {
+        particle.style.opacity = 1;
+        particle.style.transform = 'translate3d(0, 0, 0)';
+    });
 };
 
 ParticleBackground.prototype.onTouchStart = function(e) {
