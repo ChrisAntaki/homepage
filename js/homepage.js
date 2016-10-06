@@ -143,5 +143,12 @@ ParticleBackground.prototype.createWave = function(column, row) {
     }
 };
 
-// Create background
-var background = new ParticleBackground();
+// Start
+function onLoadStyles() {
+    var sheet = document.querySelector('link.styles');
+    sheet.media = 'all';
+    var background = new ParticleBackground();
+}
+if (window.stylesAreLoaded) {
+    onLoadStyles();
+}

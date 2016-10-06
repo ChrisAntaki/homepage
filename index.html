@@ -1,5 +1,6 @@
 <!doctype html>
 <html style="background-color: #08f;">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=360">
 <title>Chris Antaki</title>
@@ -10,10 +11,9 @@
 * {
     box-sizing: border-box;
 }
-html {
-    min-height: 100%;
-}
+html,
 body {
+    background-color: #08f;
     margin: 0;
     min-height: 100%;
 }
@@ -58,6 +58,9 @@ section {
     display: none;
 }
 </style>
+</head>
+
+<body>
 <header>
 <h1>Chris Antaki</h1>
 <div class="links">
@@ -70,6 +73,15 @@ section {
 </header>
 
 <!-- Below the f😉ld -->
-<link rel="stylesheet" href="./css/homepage.css">
 <section class="particles"></section>
-<script src="./js/homepage.js"></script>
+<script>
+var stylesAreLoaded = false;
+function onLoadStyles() {
+    stylesAreLoaded = true;
+}
+</script>
+<script src="./js/homepage.js" async></script>
+<link class="styles" rel="stylesheet" href="./css/homepage.css" media="none" onload="onLoadStyles()">
+
+</body>
+</html>
