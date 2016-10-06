@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=360">
 <title>Chris Antaki</title>
-<link rel="shortcut icon" href="./favicon.ico">
+<link rel="shortcut icon" href="./favicon.ico?c=1">
 
 <!-- Above the f😉ld -->
 <style>
@@ -58,6 +58,13 @@ section {
     display: none;
 }
 </style>
+<script>
+var stylesAreLoaded = false;
+function onLoadStyles() {
+    stylesAreLoaded = true;
+}
+</script>
+<link class="styles" rel="stylesheet" href="./css/homepage.css?c=1" media="none" onload="onLoadStyles()">
 </head>
 
 <body>
@@ -74,14 +81,7 @@ section {
 
 <!-- Below the f😉ld -->
 <section class="particles"></section>
-<script>
-var stylesAreLoaded = false;
-function onLoadStyles() {
-    stylesAreLoaded = true;
-}
-</script>
-<script src="./js/homepage.js" async></script>
-<link class="styles" rel="stylesheet" href="./css/homepage.css" media="none" onload="onLoadStyles()">
+<script src="./js/homepage.js?c=1" async></script>
 
 </body>
 </html>
