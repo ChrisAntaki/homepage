@@ -18,10 +18,12 @@ body {
 header {
     color: #fff;
     font-family: sans-serif;
+    letter-spacing: 3px;
     letter-spacing: 0.3vw;
     position: absolute;
     text-align: center;
-    top: calc((100% - 16vw) / 2);
+    top: calc((100% - 160px) / 2);
+    top: calc((100% - 18vw) / 2);
     width: 100%;
     z-index: 1;
 }
@@ -29,30 +31,50 @@ header h1 {
     background-image: -webkit-linear-gradient(
         270deg,
         #fff 50%,
-        #bff
+        #7ff
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: block;
+    font-size: 64px;
     font-size: 10vw;
+    margin: 0 auto 8px;
     margin: 0 auto 0.4vw;
 }
 header .links {
-    font-size: 3vw;
+    font-size: 24px;
+    font-size: 4vw;
+    letter-spacing: 0.5px;
     letter-spacing: 0.2vw;
 }
 
 header .links a {
+    background-image: -webkit-linear-gradient(
+        270deg,
+        #fff 50%,
+        #5ff
+    );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: #fff;
     display: inline-block;
     font-weight: bold;
+    padding: 8px;
     padding: 0.8vw;
     text-decoration: none;
+    transition: background-size 0.32s ease-out;
 }
+
+header .links a:hover {
+    background-size: 120%;
+}
+
 header .links .dot {
     font-size: 1.2em;
     font-weight: bold;
     position: relative;
+    top: 2px;
     top: 0.2vw;
 }
 section {
