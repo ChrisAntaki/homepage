@@ -1,6 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
-<meta name="viewport" content="width=360">
+<meta name="viewport" content="width=device-width">
 <title>Chris Antaki</title>
 <link rel="shortcut icon" href="./favicon.ico?c=2">
 
@@ -18,10 +18,10 @@ body {
 header {
     color: #fff;
     font-family: sans-serif;
-    letter-spacing: .5px;
+    letter-spacing: 0.3vw;
     position: absolute;
     text-align: center;
-    top: calc((100% - 80px) / 2);
+    top: calc((100% - 16vw) / 2);
     width: 100%;
     z-index: 1;
 }
@@ -34,22 +34,26 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: block;
-    margin: 0 auto 4px;
-    max-width: 240px;
+    font-size: 10vw;
+    margin: 0 auto 0.4vw;
 }
-header .links {}
+header .links {
+    font-size: 3vw;
+    letter-spacing: 0.2vw;
+}
+
 header .links a {
     color: #fff;
     display: inline-block;
-    font-size: 15px;
     font-weight: bold;
-    letter-spacing: 1px;
-    padding: 8px;
+    padding: 0.8vw;
     text-decoration: none;
 }
 header .links .dot {
-    font-size: 16px;
+    font-size: 1.2em;
     font-weight: bold;
+    position: relative;
+    top: 0.2vw;
 }
 section {
     display: none;
