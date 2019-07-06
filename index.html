@@ -28,7 +28,8 @@
       font-family: sans-serif;
       letter-spacing: 0.3vw;
       margin: auto;
-      text-align: center;
+      text-align: left;
+      padding: 5vw;
       width: 100%;
       z-index: 1;
     }
@@ -40,19 +41,21 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: block;
-      font-size: 8vw;
-      margin: 0 auto 0.4vw;
+      font-size: 7vw;
+      margin: 0 auto 2vw;
+      padding: 0 0 3vw;
+      border-bottom: 0.5vw solid rgba(255,255,255, 0.1);
     }
   
     header .links {
-      font-size: 4vw;
+      font-size: 6vw;
       letter-spacing: 0.2vw;
     }
   
     header .links a {
       background-image: linear-gradient(180deg,
         #fff 50%,
-        #5ff);
+        #7ff);
       background-size: 100%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -61,12 +64,14 @@
       font-weight: bold;
       padding: 0.8vw;
       text-decoration: none;
+      background-position: 0 0;
+      transition: background-position 0.24s linear;
     }
   
-    header .links a:hover {
-      background-image: linear-gradient(180deg,
-        #ffe 50%,
-        #ff7);
+    header .links a:hover,
+    header .links a:focus,
+    header .links a:active {
+      background-position: 0 -1vw;
     }
   
     header .links .dot {
@@ -74,23 +79,48 @@
       font-weight: bold;
       position: relative;
       top: 0.2vw;
+      margin: 0 0 0 3.5vw;
     }
   
     section {
       display: none;
+    }
+
+    img {
+      image-rendering: optimizeSpeed;
+      image-rendering: pixelated;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Chris Antaki</h1>
+    <h1>
+      <amp-img
+        alt="Chris Antaki"
+        title="Chris Antaki"
+        src="favicon.ico"
+        width="10vw"
+        height="10vw"
+      ></amp-img>
+      What's good?
+    </h1>
+
     <div class="links">
-      <a href="https://soundcloud.com/chrisantaki">SoundCloud</a>
       <span class="dot">&middot;</span>
-      <a href="https://github.com/chrisantaki">GitHub</a>
+      <a href="https://soundcloud.com/chrisantaki">SoundCloud</a>
+      <br>
+      <span class="dot">&middot;</span>
+      <a href="https://www.instagram.com/0p3n3y3s/">Instagram</a>
+      <br>
+      <span class="dot">&middot;</span>
+      <a href="https://www.facebook.com/chr1santaki">Facebook</a>
+      <br>
       <span class="dot">&middot;</span>
       <a href="https://www.linkedin.com/in/chrisantaki">LinkedIn</a>
+      <br>
+      <span class="dot">&middot;</span>
+      <a href="https://github.com/chrisantaki">GitHub</a>
     </div>
   </header>
 </body>
