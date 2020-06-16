@@ -1,129 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ⚡>
+  <head>
+    <meta charset="utf-8" />
+    <title>It's me, Chris Antaki</title>
+    <meta name="description" content="Chris Antaki's eponymous homepage." />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="canonical" href="https://www.chrisantaki.com/" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+    <style amp-custom>
+      * {
+        box-sizing: border-box;
+      }
 
-<head>
-  <meta charset="utf-8">
-  <title>It's me, Chris Antaki</title>
-  <meta name="description" content="Chris Antaki's eponymous homepage.">
-  <link rel="shortcut icon" href="./favicon.ico">
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <link rel="canonical" href="https://www.chrisantaki.com/">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-  <style amp-custom>
-    * {
-      box-sizing: border-box;
-    }
-  
-    html,
-    body {
-      background: linear-gradient(215deg, #09f, #f09);
-      display: flex;
-      margin: 0;
-      min-height: 100%;
-      width: 100%;
-    }
-  
-    header {
-      color: rgba(255, 255, 255, 0.4);
-      font-family: sans-serif;
-      letter-spacing: 0.3vw;
-      margin: auto;
-      text-align: left;
-      padding: 5vw;
-      width: 100%;
-      z-index: 1;
-    }
-  
-    header h1 {
-      background-image: linear-gradient(180deg,
-        #fff 50%,
-        #7ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: block;
-      font-size: 7vw;
-      margin: 0 auto 2vw;
-      padding: 0 0 3vw;
-      border-bottom: 0.5vw solid rgba(255,255,255, 0.1);
-    }
-  
-    header .links {
-      font-size: 6vw;
-      letter-spacing: 0.2vw;
-    }
-  
-    header .links a {
-      background-image: linear-gradient(180deg,
-        #fff 50%,
-        #7ff);
-      background-size: 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: #fff;
-      display: inline-block;
-      font-weight: bold;
-      padding: 0.8vw;
-      text-decoration: none;
-      background-position: 0 0;
-      transition: background-position 0.24s linear;
-    }
-  
-    header .links a:hover,
-    header .links a:focus,
-    header .links a:active {
-      background-position: 0 -1vw;
-    }
-  
-    header .links .dot {
-      font-size: 1.2em;
-      font-weight: bold;
-      position: relative;
-      top: 0.2vw;
-      margin: 0 0 0 3.5vw;
-    }
-  
-    section {
-      display: none;
-    }
+      html,
+      body {
+        background: linear-gradient(15deg, #02357a, #7099fe, #09f6fc);
+        display: flex;
+        margin: 0;
+        min-height: 100%;
+        width: 100%;
+      }
 
-    img {
-      image-rendering: optimizeSpeed;
-      image-rendering: pixelated;
-    }
-  </style>
-</head>
+      header {
+        color: rgba(255, 255, 255, 0.4);
+        font-family: sans-serif;
+        letter-spacing: 0.3vw;
+        margin: auto;
+        text-align: left;
+        padding: 5vw;
+        width: 100%;
+        z-index: 1;
+      }
 
-<body>
-  <header>
-    <h1>
-      <amp-img
-        alt="Chris Antaki"
-        title="Chris Antaki"
-        src="favicon.ico"
-        width="10vw"
-        height="10vw"
-      ></amp-img>
-      What's good?
-    </h1>
+      header h1 {
+        color: #fff;
+        text-shadow: 1vw 1vw 3vw rgba(0, 0, 255, 0.3);
+        display: block;
+        font-size: 5vw;
+        margin: 0 auto 2vw;
+        padding: 0 0 3vw;
+        border-bottom: 0.5vw solid rgba(255, 255, 255, 0.1);
+      }
 
-    <div class="links">
-      <span class="dot">&middot;</span>
-      <a href="https://soundcloud.com/chrisantaki">SoundCloud</a>
-      <br>
-      <span class="dot">&middot;</span>
-      <a href="https://www.instagram.com/0p3n3y3s/">Instagram</a>
-      <br>
-      <span class="dot">&middot;</span>
-      <a href="https://www.facebook.com/chr1santaki">Facebook</a>
-      <br>
-      <span class="dot">&middot;</span>
-      <a href="https://www.linkedin.com/in/chrisantaki">LinkedIn</a>
-      <br>
-      <span class="dot">&middot;</span>
-      <a href="https://github.com/chrisantaki">GitHub</a>
-    </div>
-  </header>
-</body>
+      header .links {
+        font-size: 5vw;
+        letter-spacing: 0.2vw;
+      }
 
+      header .links a {
+        background-image: linear-gradient(181deg, #cff 50%, #0ff);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #fff;
+        display: inline-block;
+        font-weight: bold;
+        padding: 0.8vw;
+        text-decoration: none;
+      }
+
+      header .links a:hover,
+      header .links a:focus,
+      header .links a:active {
+        background-image: linear-gradient(181deg, #9ff 50%, #0ff);
+      }
+
+      header .links .dot {
+        font-size: 1.2em;
+        font-weight: bold;
+        position: relative;
+        top: 0.2vw;
+        margin: 0 0 0 3.5vw;
+      }
+
+      section {
+        display: none;
+      }
+
+      img {
+        image-rendering: optimizeSpeed;
+        image-rendering: pixelated;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <amp-img
+          alt="Chris Antaki"
+          title="Chris Antaki"
+          src="cloud.gif"
+          width="17.5vw"
+          height="10vw"
+        ></amp-img>
+        Stay safe!
+      </h1>
+
+      <div class="links">
+        <span class="dot">&middot;</span>
+        <a href="https://soundcloud.com/chrisantaki">SoundCloud</a>
+        <br />
+        <span class="dot">&middot;</span>
+        <a href="https://www.instagram.com/0p3n3y3s/">Instagram</a>
+        <br />
+        <span class="dot">&middot;</span>
+        <a href="https://www.facebook.com/chr1santaki">Facebook</a>
+      </div>
+    </header>
+  </body>
 </html>
