@@ -1,148 +1,79 @@
 <!DOCTYPE html>
-<html ⚡>
+<html 🎸>
   <head>
     <meta charset="utf-8" />
     <title>It's me, Chris Antaki</title>
     <meta name="description" content="Chris Antaki's eponymous homepage." />
     <link rel="shortcut icon" href="./favicon.ico" />
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="https://www.chrisantaki.com/" />
     <meta
       name="viewport"
       content="width=device-width,minimum-scale=1,initial-scale=1"
     />
-    <style amp-boilerplate>
-      body {
-        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-      }
-      @-webkit-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-moz-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-ms-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-o-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-    </style>
-    <noscript
-      ><style amp-boilerplate>
-        body {
-          -webkit-animation: none;
-          -moz-animation: none;
-          -ms-animation: none;
-          animation: none;
-        }
-      </style></noscript
-    >
-    <style amp-custom>
+    <style>
       * {
         box-sizing: border-box;
       }
 
       html,
       body {
-        background: linear-gradient(15deg, #02357a, #7099fe, #09f6fc);
+        background-image: linear-gradient(15deg, #062f69, #530672, #e25f07);
+        background-color: #7099fe;
         display: flex;
         margin: 0;
         min-height: 100%;
+        text-align: center;
         width: 100%;
       }
 
       header {
-        color: rgba(255, 255, 255, 0.4);
         font-family: sans-serif;
-        letter-spacing: 0.3vw;
         margin: auto;
-        text-align: left;
-        padding: 5vw;
+        padding: 10vmin;
         width: 100%;
         z-index: 1;
       }
 
       header h1 {
-        border-bottom: 0.5vw solid rgba(255, 255, 255, 0.1);
+        border-bottom: 2vmin solid rgba(255, 255, 255, 0.2);
         color: #fff;
         display: block;
-        font-size: 5vw;
-        margin: 0 auto 2vw;
-        padding: 0 0 3vw;
-        text-shadow: 0.5vw 0.5vw 1.5vw rgba(0, 0, 255, 0.125),
-          1vw 1vw 3vw rgba(0, 0, 255, 0.125);
+        font-size: 10vmin;
+        margin: 0 auto 4vmin;
+        padding: 0;
+      }
+
+      header h1 img {
+        display: block;
+        margin: 0 auto;
+        height: 28vmin;
+        transform: translateY(1.2vmin);
+        image-rendering: optimizeSpeed;
+        image-rendering: pixelated;
       }
 
       header .links {
-        font-size: 5vw;
-        letter-spacing: 0.2vw;
+        font-size: 10vmin;
+        letter-spacing: 0.2vmin;
       }
 
       header .links a {
-        background-image: linear-gradient(181deg, #aff 50%, #0ff);
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: #fff;
-        display: inline-block;
-        font-weight: bold;
-        padding: 0.8vw;
+        color: rgba(255, 255, 255, 0.8);
+        display: block;
+        padding: 1.4vmin;
+        transition: color 0.1s;
         text-decoration: none;
       }
 
       header .links a:hover,
       header .links a:focus,
       header .links a:active {
-        background-image: linear-gradient(181deg, #6ff 50%, #0ff);
-      }
-
-      header .links .dot {
-        font-size: 1.2em;
-        font-weight: bold;
-        position: relative;
-        top: 0.2vw;
-        margin: 0 0 0 3.5vw;
+        color: rgba(255, 255, 255, 1);
+        text-decoration: underline;
       }
 
       section {
         display: none;
-      }
-
-      img {
-        image-rendering: optimizeSpeed;
-        image-rendering: pixelated;
       }
     </style>
   </head>
@@ -150,24 +81,12 @@
   <body>
     <header>
       <h1>
-        <amp-img
-          alt="Chris Antaki"
-          title="Chris Antaki"
-          src="cloud.gif"
-          width="17.5vw"
-          height="10vw"
-        ></amp-img>
-        Stay safe
+        <img alt="Chris Antaki" title="Hay" src="cloud.gif" />
       </h1>
 
       <div class="links">
-        <span class="dot">&middot;</span>
         <a href="https://soundcloud.com/chrisantaki">SoundCloud</a>
-        <br />
-        <span class="dot">&middot;</span>
         <a href="https://www.instagram.com/0p3n3y3s/">Instagram</a>
-        <br />
-        <span class="dot">&middot;</span>
         <a href="https://www.facebook.com/chr1santaki">Facebook</a>
       </div>
     </header>
