@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>It's me, Chris Antaki</title>
     <meta name="description" content="Chris Antaki's eponymous homepage." />
-    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="shortcut icon" href="./les-paul.ico" />
     <link rel="canonical" href="https://www.chrisantaki.com/" />
     <meta
       name="viewport"
@@ -17,8 +17,7 @@
 
       html,
       body {
-        background-image: linear-gradient(15deg, #062f69, #530672, #e25f07);
-        background-color: #7099fe;
+        background-color: #000;
         display: flex;
         margin: 0;
         min-height: 100%;
@@ -26,70 +25,61 @@
         width: 100%;
       }
 
+      .background-loop {
+        bottom: 0;
+        filter: hue-rotate(95deg);
+        height: 100%;
+        image-rendering: optimizeSpeed;
+        image-rendering: pixelated;
+        left: 0;
+        opacity: 0.125;
+        position: fixed;
+        right: 0;
+        top: 0;
+        user-select: none;
+        width: 100%;
+        z-index: 0;
+      }
+
       header {
-        font-family: sans-serif;
         margin: auto;
-        padding: 10vmin;
         width: 100%;
         z-index: 1;
       }
 
-      header h1 {
-        border-bottom: 2vmin solid rgba(255, 255, 255, 0.2);
-        color: #fff;
-        display: block;
-        font-size: 10vmin;
-        margin: 0 auto 4vmin;
-        padding: 0;
-      }
-
       header h1 img {
+        animation: pulse 1s ease-in-out alternate infinite;
         display: block;
         margin: 0 auto;
-        height: 28vmin;
-        transform: translateY(1.2vmin);
+        height: 70vmin;
         image-rendering: optimizeSpeed;
         image-rendering: pixelated;
       }
 
-      header .links {
-        font-size: 10vmin;
-        letter-spacing: 0.2vmin;
-      }
+      @keyframes pulse {
+        from {
+          transform: scale(1);
+        }
 
-      header .links a {
-        color: rgb(30, 200, 255);
-        display: block;
-        padding: 1.4vmin;
-        transition: color 0.4s;
-      }
-
-      header .links a:hover,
-      header .links a:focus,
-      header .links a:active {
-        color: rgba(255, 255, 255, 1);
-        text-decoration: underline;
-        transition: color 0s;
-      }
-
-      section {
-        display: none;
+        to {
+          transform: scale(1.15);
+        }
       }
     </style>
   </head>
 
   <body>
+    <img class="background-loop" src="green-loop.gif" />
     <header>
-      <h1 title="Chris Antaki">🎸🌊</h1>
-
-      <div class="links">
-        <a target="_blank" href="https://www.twitch.tv/chrisantakimusic"
-          >Music</a
-        >
-        <a target="_blank" href="https://www.instagram.com/chrisantakimusic"
-          >Insta</a
-        >
-      </div>
+      <a target="_blank" href="https://www.twitch.tv/chrisantakimusic">
+        <h1>
+          <img
+            alt="Hey! I hope you enjoy this improvised ambient music 🎸🌊"
+            title="Hey! I hope you enjoy this improvised ambient music 🎸🌊"
+            src="les-paul.ico"
+          />
+        </h1>
+      </a>
     </header>
   </body>
 </html>
